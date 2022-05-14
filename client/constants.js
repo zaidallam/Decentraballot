@@ -1,0 +1,1 @@
+export const appAddress = "0xD0b40dF5aFdBEA4d88Ca77EC14E2A50eE65FF134";

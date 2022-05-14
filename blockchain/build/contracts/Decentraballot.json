@@ -28,7 +28,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -70,7 +71,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -89,7 +91,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"contests\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"bytes32[]\",\"name\":\"candidates\",\"type\":\"bytes32[]\"}],\"name\":\"createContest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"}],\"name\":\"getContestAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"identifier\",\"type\":\"bytes32\"}],\"name\":\"getContestDescription\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Decentraballot.sol\":\"Decentraballot\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Decentraballot.sol\":{\"keccak256\":\"0x985e1842ffa0fd97f7d69d88dae79cb6895080f31597e4cb372906012f0352aa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e86b54f5f2a47766564bebd506760e46e0cdef7bcc0b32b799b526a11c944817\",\"dweb:/ipfs/QmZUK68d2gPPbUK8NKkTjtKc4H4FMTGnZYE3wnYvEdr7Nf\"]}},\"version\":1}",
@@ -10285,12 +10288,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xdcf55D1e5fdFAAeC3175C2fAC581961A7591D067",
-      "transactionHash": "0x25787217f6e581037666c3c4ecfc82cdf5cbad79a8ab2218fb70926b2e2a92a3"
+      "address": "0xD0b40dF5aFdBEA4d88Ca77EC14E2A50eE65FF134",
+      "transactionHash": "0x5cfaa3e234116262b0f18a9465a81059a2311b5ecd1b6dbd74962d1f79eb7b32"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-04-26T22:17:11.363Z",
+  "updatedAt": "2022-05-14T03:18:24.490Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

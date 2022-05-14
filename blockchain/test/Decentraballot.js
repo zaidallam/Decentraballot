@@ -7,7 +7,7 @@ contract('Decentraballot', () => {
         ballot = await Decentraballot.deployed();
     });
 
-    let toBytes32 = (value) => web3.utils.padLeft(web3.utils.asciiToHex(value), 32);
+    const toBytes32 = (value) => web3.utils.padLeft(web3.utils.asciiToHex(value), 32);
 
     it('Should create a Contest', async () => {
         try {
