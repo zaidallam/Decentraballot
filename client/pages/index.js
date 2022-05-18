@@ -21,14 +21,11 @@ export default function Home() {
         e.preventDefault();
 
         try {
-            decentraballot.createContest(
-                ethers.utils.formatBytes32String(newContest.id),
-                newContest.description,
-                newContest.candidates.map(x => ethers.utils.formatBytes32String(x)))
-                .then(res => console.log(res))
-                .catch(err => console.log(err));
+            await decentraballot.createContest(ethers.utils.formatBytes32String(newContest.id), newContest.description, newContest.candidates.map(x => ethers.utils.formatBytes32String(x)));
+            router.push(`/${newContest.id}`)
         } catch (e) {
             console.log(e);
+            alert("Whoops! Something went wrong...")
         }
     }
 
@@ -40,6 +37,7 @@ export default function Home() {
             router.push(`/${existingContestId}`);
         } catch (e) {
             console.log(e);
+            alert("Contest with your chosen identifier does not exist");
         }
     }
 

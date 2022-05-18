@@ -18,8 +18,8 @@ contract Contest {
     mapping(address => Voter) public voters;
     Candidate[] public candidates;
 
-    constructor(bytes32[] memory candidateNames) {
-        creator = msg.sender;
+    constructor(bytes32[] memory candidateNames, address creatorAddress) {
+        creator = creatorAddress;
         voters[creator].weight = 1;
 
         for (uint i = 0; i < candidateNames.length; i++) {
@@ -44,6 +44,10 @@ contract Contest {
             "This address has already been granted the right to vote"
         );
         voters[voter].weight = 1;
+    }
+
+    function getCandidates() public view returns (Candidate[] memory) {
+        return candidates;
     }
 
     function delegate(address delegateAddress) external {
@@ -120,7 +124,7 @@ contract Decentraballot {
         contests[identifier] = ContestIdentity(
             {
                 identifier: identifier,
-                contractAddress: address(new Contest(candidates)),
+                contractAddress: address(new Contest(candidates, msg.sender)),
                 description: description
             }
         );

@@ -1,1 +1,1 @@
-export const appAddress = "0xD0b40dF5aFdBEA4d88Ca77EC14E2A50eE65FF134";
+export const appAddress = "0x1AD9aFe9aEB135fe9530dfD6660712B64CB4e905";

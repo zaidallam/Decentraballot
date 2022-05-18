@@ -5,10 +5,13 @@ export default function useMetamask() {
         const [isConnected, setIsConnected] = useState(false);
         const [provider, setProvider] = useState();
         const [signer, setSigner] = useState();
+        const [account, setAccount] = useState();
 
         const handleAccountsChanged = useCallback(async () => {
-                if ((await ethereum.request({ method: "eth_accounts" })).length === 0) {
-                setIsConnected(false);
+                let metamaskAccounts = await ethereum.request({ method: "eth_accounts" });
+                setAccount(metamaskAccounts[0])
+                if (metamaskAccounts.length === 0) {
+                        setIsConnected(false);
                 }
         }, []);
 
@@ -30,7 +33,7 @@ export default function useMetamask() {
         const connectWallet = async (event) => {
                 if (typeof window.ethereum !== 'undefined') {
                         try {
-                                await ethereum.request({ method: 'eth_requestAccounts' });
+                                setAccount((await ethereum.request({ method: 'eth_requestAccounts' }))[0]);
                                 setupConnection();
                         } catch (e) {
                                 console.log(e);
@@ -48,16 +51,19 @@ export default function useMetamask() {
                         return;
                 }
 
-                if ((await ethereum.request({ method: "eth_accounts" })).length === 0) {
+                let metamaskAccounts = await ethereum.request({ method: "eth_accounts" });
+                setAccount(metamaskAccounts[0])
+
+                if (metamaskAccounts.length === 0) {
                         return;
                 }
-                
+
                 setupConnection();
-                
+
                 return () => window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
         }
 
         useEffect(() => { checkConnection() }, []);
 
-        return { isConnected, provider, signer, connectWallet };
+        return { isConnected, provider, signer, connectWallet, account };
 }
