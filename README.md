@@ -35,13 +35,6 @@ This project and its code were engineered solely by Zaid Allam.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Getting Started
-
-Getting started is easy. Simply download the repository and run `npm i` in both the `/client` and `/blockchain` directories. Then, open two separate terminals.
-In the second terminal, navigate to the blockchain directory and run `truffle migrate`. Once that has completed, run `truffle deploy` and keep note of the Decentraballot contract deployment address. Finally, run `truffle develop`.
-In the first terminal, navigate to the client directory. Before running `npm run dev` or `npm run build`, navigate to `./constants.js` and add the address of your instance of the Decentraballot contract.
-Finally, once all the above steps have been compeleted, launch your browser and open localhost:3000. You should be all set!
-
 ## Prerequisites
 
 This project requires you to have Node.js and npm installed on your system.
