@@ -36,6 +36,11 @@ export default function ContestView() {
           "internalType": "bytes32[]",
           "name": "candidateNames",
           "type": "bytes32[]"
+        },
+        {
+          "internalType": "address",
+          "name": "creatorAddress",
+          "type": "address"
         }
       ],
       "stateMutability": "nonpayable",

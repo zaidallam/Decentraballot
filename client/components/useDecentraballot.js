@@ -10,96 +10,99 @@ export default function useDecentraballot(isConnected, provider, signer) {
         
                 const appabi = [
                     {
-                    "inputs": [
+                      "inputs": [
                         {
-                        "internalType": "bytes32",
-                        "name": "",
-                        "type": "bytes32"
+                          "internalType": "bytes32",
+                          "name": "",
+                          "type": "bytes32"
                         }
-                    ],
-                    "name": "contests",
-                    "outputs": [
+                      ],
+                      "name": "contests",
+                      "outputs": [
                         {
-                        "internalType": "bytes32",
-                        "name": "identifier",
-                        "type": "bytes32"
+                          "internalType": "bytes32",
+                          "name": "identifier",
+                          "type": "bytes32"
                         },
                         {
-                        "internalType": "string",
-                        "name": "description",
-                        "type": "string"
+                          "internalType": "string",
+                          "name": "description",
+                          "type": "string"
                         },
                         {
-                        "internalType": "address",
-                        "name": "contractAddress",
-                        "type": "address"
+                          "internalType": "address",
+                          "name": "contractAddress",
+                          "type": "address"
                         }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
+                      ],
+                      "stateMutability": "view",
+                      "type": "function",
+                      "constant": true
                     },
                     {
-                    "inputs": [
+                      "inputs": [
                         {
-                        "internalType": "bytes32",
-                        "name": "identifier",
-                        "type": "bytes32"
+                          "internalType": "bytes32",
+                          "name": "identifier",
+                          "type": "bytes32"
                         },
                         {
-                        "internalType": "string",
-                        "name": "description",
-                        "type": "string"
+                          "internalType": "string",
+                          "name": "description",
+                          "type": "string"
                         },
                         {
-                        "internalType": "bytes32[]",
-                        "name": "candidates",
-                        "type": "bytes32[]"
+                          "internalType": "bytes32[]",
+                          "name": "candidates",
+                          "type": "bytes32[]"
                         }
-                    ],
-                    "name": "createContest",
-                    "outputs": [],
-                    "stateMutability": "nonpayable",
-                    "type": "function"
+                      ],
+                      "name": "createContest",
+                      "outputs": [],
+                      "stateMutability": "nonpayable",
+                      "type": "function"
                     },
                     {
-                    "inputs": [
+                      "inputs": [
                         {
-                        "internalType": "bytes32",
-                        "name": "identifier",
-                        "type": "bytes32"
+                          "internalType": "bytes32",
+                          "name": "identifier",
+                          "type": "bytes32"
                         }
-                    ],
-                    "name": "getContestAddress",
-                    "outputs": [
+                      ],
+                      "name": "getContestAddress",
+                      "outputs": [
                         {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
+                          "internalType": "address",
+                          "name": "",
+                          "type": "address"
                         }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
+                      ],
+                      "stateMutability": "view",
+                      "type": "function",
+                      "constant": true
                     },
                     {
-                    "inputs": [
+                      "inputs": [
                         {
-                        "internalType": "bytes32",
-                        "name": "identifier",
-                        "type": "bytes32"
+                          "internalType": "bytes32",
+                          "name": "identifier",
+                          "type": "bytes32"
                         }
-                    ],
-                    "name": "getContestDescription",
-                    "outputs": [
+                      ],
+                      "name": "getContestDescription",
+                      "outputs": [
                         {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
+                          "internalType": "string",
+                          "name": "",
+                          "type": "string"
                         }
-                    ],
-                    "stateMutability": "view",
-                    "type": "function"
+                      ],
+                      "stateMutability": "view",
+                      "type": "function",
+                      "constant": true
                     }
-                ];
+                  ]
         
                 let contract;
         

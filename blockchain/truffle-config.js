@@ -23,6 +23,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const { nodeAddress, mnemonic } = require('./secrets.json');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -39,7 +42,15 @@ module.exports = {
       host: "127.0.0.1",
       port: 7545,
       network_id: "5777"
-    }
+    },
+    ropsten: {
+      provider: () => new HDWalletProvider(mnemonic, nodeAddress),
+      network_id: 3,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal

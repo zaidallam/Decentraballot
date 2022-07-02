@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": ""
+  "license": "",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.10"
+  }
 }
